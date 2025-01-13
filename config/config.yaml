@@ -1,0 +1,15 @@
+start_position:
+  x: 0.5
+  y: 0.0
+  yaw: 3.14
+
+areas:
+  area_1:
+    start: {x: 1, y:  -0.56, yaw: 0}
+    end: {x: 4.8, y: -0.50, yaw: 0}
+  area_2:
+    start: {x: 1, y: -0.136, yaw: 0}
+    end: {x: 8.5, y: 0.15, yaw: 0}
+  area_3:
+    start: {x: 1, y: 0.64, yaw: 0}
+    end: {x: 8.5, y: 0.74, yaw: 0}

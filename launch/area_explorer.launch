@@ -1,0 +1,21 @@
+<launch>
+    <!-- Launch limo_bringup -->
+    <include file="$(find limo_bringup)/launch/limo_start.launch">
+        <arg name="pub_odom_tf" value="false"/>
+    </include>
+
+    <!-- Launch limo_navigation_diff -->
+    <include file="$(find limo_bringup)/launch/limo_navigation_diff.launch" />
+
+    <!-- Launch astra_camera -->
+    <include file="$(find astra_camera)/launch/dabai_u3.launch" />
+
+    <!-- Run aruco_marker_detection -->
+    <node pkg="aruco_marker_detection" type="aruco_detection.py" name="aruco_detection" output="screen" />
+
+    <!-- Run imu_step_monitor -->
+    <node pkg="imu_step_monitor" type="imu_acceleration_monitor.py" name="imu_acceleration_monitor" output="screen" />
+
+    <!-- Run area_explorer -->
+    <node pkg="area_explorer" type="area_explorer.py" name="area_explorer" output="screen" />
+</launch>
